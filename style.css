@@ -1,0 +1,319 @@
+/* Grunnleggende styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+   background-color: #e6e6e6; /* pick one background color */
+  color: #333;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding-top: 30px;
+    
+}
+
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: rgb(207, 206, 206) solid;
+  
+}
+.container:hover{
+    background: #59636d;
+    transition: 0.3 ease;
+}
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+    /* background:  #3498db; */
+    background: url(kimberly-farmer-lUaaKCUANVI-unsplash.jpg);
+    background-size: cover;
+    
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f2f5f8;
+}
+
+
+
+header p {
+    font-size: 1.1rem;
+    color: #f2f5f8;
+}
+
+/* Hovedinnhold */
+main {
+    margin-bottom: 30px;
+}
+
+/* Seksjoner */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.5rem;
+}
+
+/* Legg til bok seksjon */
+.add-book-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr 1fr auto auto;
+    gap: 15px;
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.checkbox-group input {
+    width: auto;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Filtrering og sortering seksjon */
+.filter-sort-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-sort-row {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.filter-group, .sort-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label, .sort-group label {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+/* Bokliste seksjon */
+.books-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    
+    
+    border-left: 4px solid #3498db;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-card.reading {
+    border-left-color: #2ecc71;
+    border-top-color: #2ecc71;
+}
+
+.book-card .book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.book-card .book-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.book-card .book-author {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.book-card .book-details {
+    margin-bottom: 15px;
+}
+
+.book-card .book-details p {
+    margin-bottom: 8px;
+}
+
+.book-card .book-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.book-card .book-actions button {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+}
+
+.book-card .status-badges {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.reading {
+    background: #2ecc71;
+}
+
+.badge.genre {
+    background: #3498db;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    color: #7f8c8d;
+    margin-top: 40px;
+    font-weight: 500px;
+}
+
+/* Responsivt design */
+@media (max-width: 992px) {
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .filter-sort-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .books-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-sort-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    section {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .book-card .book-actions {
+        flex-direction: column;
+    }
+}

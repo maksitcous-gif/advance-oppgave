@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Library</h1>
+            <p>Register books you are reading and have read</p>
+        </header>
+
+        <main>
+            <!-- Legg til bok seksjon -->
+            <section class="add-book-section">
+                <h2>Add a Book</h2>
+                <form id="book-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="title" placeholder="Book title" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="author" placeholder="Author" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="genre">
+                                <option value="" disabled selected>Select genre</option>
+                                <option value="Fiction">Fiction</option>
+                                <option value="Non-Fiction">Non-Fiction</option>
+                                <option value="Science Fiction">Science Fiction</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Biography">Biography</option>
+                                <option value="History">History</option>
+                                <option value="Self-Help">Self-Help</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="pages" placeholder="Number of pages" min="1">
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="reading">
+                            <label for="reading">Reading</label>
+                        </div>
+                        <button type="submit">Add Book</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Filtrering og sortering seksjon -->
+            <section class="filter-sort-section">
+                <div class="filter-sort-row">
+                    <div class="filter-group">
+                        <label for="filter-genre">Filter by genre:</label>
+                        <select id="filter-genre">
+                            <option value="all">All</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Non-Fiction">Non-Fiction</option>
+                            <option value="Science Fiction">Science Fiction</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Mystery">Mystery</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Biography">Biography</option>
+                            <option value="History">History</option>
+                            <option value="Self-Help">Self-Help</option>
+                        </select>
+                    </div>
+                    <div class="sort-group">
+                        <label for="sort-by">Sort:</label>
+                        <select id="sort-by">
+                            <option value="title">Title</option>
+                            <option value="author">Author</option>
+                            <option value="pages">Pages</option>
+                            <option value="genre">Genre</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bokliste seksjon -->
+            <section class="books-section">
+                <h2>My Books</h2>
+                <div class="books-container" id="books-container">
+                    <!-- Bøkene vil vises her -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 11-2025 My Library</p>
+        </footer>
+    </div>
+
+   
+</body>
+</html>
